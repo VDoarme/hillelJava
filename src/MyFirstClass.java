@@ -12,7 +12,7 @@ public class MyFirstClass {
         System.out.println(message);
 
         long millisecondsFromBC = 2016L * 365 * 24 * 3600 * 1000;
-        long millisecondsFromBC = (long) 2016 * 365 * 24 * 3600 * 1000;
+        //long millisecondsFromBC = (long) 2016 * 365 * 24 * 3600 * 1000;
 
         /**int intYears = (int) years;*/
 
