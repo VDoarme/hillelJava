@@ -1,4 +1,4 @@
-package src.OOP;
+package OOP;
 
 /**
  * Created by User on 26.02.2016.
