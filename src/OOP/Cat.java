@@ -16,6 +16,15 @@ public class Cat {
         this.birthYear = birthYear;
     }
 
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "color='" + color + '\'' +
+                ", name='" + name + '\'' +
+                ", birthYear=" + birthYear +
+                '}';
+    }
+
     public void meow(){ System.out.println("meow!");}
 
     public void vacinate(String vacine){
