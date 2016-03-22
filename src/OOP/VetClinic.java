@@ -8,7 +8,7 @@ public class VetClinic {
 
         Cat catTom = new Cat("Tom", "Blue", 2015);
 
-        catTom.vacinate("SACC");
+        //catTom.vacinate("SACC");
 
         //catTom.birthYear = 2014;
         System.out.println(catTom.getBirthYear());
