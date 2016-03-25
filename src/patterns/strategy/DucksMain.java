@@ -1,4 +1,4 @@
-package patterns;
+package patterns.strategy;
 
 /**
  * Created by User on 15.03.2016.

@@ -1,5 +1,8 @@
 package collections;
 
+/**
+ * Created by User on 25.03.2016.
+ */
 
 import OOP.Cat;
 
@@ -7,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
+
 
 /**
  * Created by User on 18.03.2016.
@@ -49,3 +53,4 @@ public class CollectionMain {
         }
     }
 }
+

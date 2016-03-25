@@ -64,6 +64,7 @@ public class Cat implements Comparable {
                 '}';
     }
 
+    /*
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -76,6 +77,7 @@ public class Cat implements Comparable {
         return name.equals(cat.name);
 
     }
+    */
 
     @Override
     public int hashCode() {

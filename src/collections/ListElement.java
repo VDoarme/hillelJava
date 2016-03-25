@@ -6,6 +6,7 @@ package collections;
 public class ListElement {
     private Object value;
     private ListElement next;
+    public Object getValue;
 
     public ListElement(Object value){
         this.value = value;
@@ -38,5 +39,13 @@ public class ListElement {
         }else{
             next.add(0);
         }
+    }
+
+    public Object getValue() {
+        return value;
+    }
+
+    public ListElement getNext() {
+        return next;
     }
 }
