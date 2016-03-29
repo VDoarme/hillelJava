@@ -5,18 +5,15 @@ import collections.ListElement;
 import java.util.Iterator;
 
 /**
- * Created by User on 25.03.2016.
+ * Created by User on 29.03.2016.
  */
-public class CustomLimkedListIterator implements Iterator{
-
+public class CustomLinkedListIterator implements Iterator {
 
     private ListElement next;
 
-    public CustomLimkedListIterator(ListElement next) {
+    public CustomLinkedListIterator(ListElement next) {
         this.next = next;
     }
-
-
 
     @Override
     public boolean hasNext() {
@@ -27,7 +24,6 @@ public class CustomLimkedListIterator implements Iterator{
     public Object next() {
         Object value = next.getValue();
         next = next.getNext();
-
         return value;
     }
 }
