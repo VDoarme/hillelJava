@@ -20,34 +20,29 @@ public class WeatherStation {
     }
 
     public void removeObserver(Observer observer){
+        observers.remove(observer);
 
     }
 
     public void stateChanged(){
         for (Observer observer : observers){
-            observer.update(temperature, humidity, pressure);
+            observer.update(this);
         }
         /*
         currentDisplay.update(temperature,humidity,pressure);
         statisticDisplay.update(temperature,humidity,pressure);
         forecastDisplay.update(temperature,humidity,pressure);
         */
-
-
     }
 
     public int getHumidity() {
         return humidity;
     }
-
     public int getPressure() {
         return pressure;
     }
+    public int getTemperature() { return temperature; }
 
-    public int getTemperature() {
-
-        return temperature;
-    }
 
     public void setTemperature(int temperature) {
         this.temperature = temperature;

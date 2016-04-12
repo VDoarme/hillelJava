@@ -13,8 +13,8 @@ public class ForecastDisplay implements Observer{
     private Random random = new Random();
 
     @Override
-    public void update(int temperature, int humidity, int pressure){
-        this.temperature = randomize(temperature);
+    public void update(WeatherStation station){
+        this.temperature = station.getTemperature();
         this.humidity = randomize(humidity);
         this.pressure = randomize(pressure);
     }
