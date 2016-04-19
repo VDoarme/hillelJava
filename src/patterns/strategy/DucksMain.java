@@ -1,13 +1,25 @@
 package patterns.strategy;
 
+import patterns.strategy.fly.Rocket;
 /**
  * Created by User on 15.03.2016.
  */
 public class DucksMain {
     public static void main(String[] args) {
-        Duck duck = new RubberDuck();
+        Duck justDuck = new RubberDuck();
 
-        duck.display();
-        duck.quack();
+        justDuck.display();
+        justDuck.quack();
+        justDuck.fly();
+
+        justDuck.setFlyBehaviour(new Rocket());
+
+        justDuck.fly();
+
     }
+
+    public static void duckWork(Duck[] ducks) {
+
+    }
+
 }

@@ -6,6 +6,4 @@ package OOP.abatraction;
 public interface Repairable {
     void repair();
 
-
-
 }

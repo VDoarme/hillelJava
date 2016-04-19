@@ -19,54 +19,65 @@ public class InheritanceMain {
         Manager manager = new Manager();
         manager.setPosition("director");
         manager.setName("Igor");
-
         manager.fire(employee);
 
         person.getName();
 
-        Person emplpoyeeAsPerson = employee;//абкаст
-        emplpoyeeAsPerson = person;
+        Person employeeAsPerson = employee;
+        //employeeAsPerson = person;
 
         Person managerAsPerson = manager;
 
         managerAsPerson.getName();
-        emplpoyeeAsPerson.getName();
+        employeeAsPerson.getName();
+
+        //employeeAsPerson = person;
+        //employeeAsPerson.getPosition();
 
         //Manager personAsManager = person;
 
-        //Employee employee1 = (Employee) emplpoyeeAsPerson; //Так лучше не делать, приводит к ошибкам //даункаст
 
-        if (emplpoyeeAsPerson instanceof Employee){
+        // Employee employee1 = (Employee) employeeAsPerson;
+
+        if (employeeAsPerson instanceof Employee) {
             System.out.println("he is employee");
-        }else {
+        } else {
             System.out.println("he is not employee");
         }
 
 
-        //System.out.println(person.greeting(););
-
-        person.greeting();
-        employee.greeting();
-        manager.greeting();
+        // System.out.println(employee1.getPosition());
 
 
-
-    Person somebody = employee;
-    somebody.greeting();
-
-
+        Person somebody = manager;
+        somebody.greeting();
 
         speak(person);
-        speak(emplpoyeeAsPerson);
+        speak(employeeAsPerson);
         speak(manager);
 
+
+        /*Employee employee1 = new Employee();
+        employee1.name = "Ivan";
+        printName(employee1);*/
+
         System.out.println(person.getName());
+        System.out.println(employee.getName());
         System.out.println(manager.getName());
 
+        Object o = new Employee();
+        o = "SDF";
+
     }
+
+    /*public static void printName(Person person){
+        System.out.println("name is " + person.name);
+    }*/
+
 
     public static void speak(Person person){
         person.greeting();
     }
+
 
 }

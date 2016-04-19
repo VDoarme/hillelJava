@@ -3,7 +3,7 @@ package OOP.inheritance.hierarchy;
 /**
  * Created by User on 04.03.2016.
  */
-public class Employee extends Person{
+public class Employee extends Person {
     protected String position;
 
     public Employee(){
@@ -14,8 +14,7 @@ public class Employee extends Person{
         super(name);
     }
 
-
-    public String getPosition(){
+    public String getPosition() {
         return position;
     }
 
@@ -28,7 +27,9 @@ public class Employee extends Person{
         return super.getName().toUpperCase() + "!";
     }
 
-    public void greeting(){
-        System.out.println("Hello, I'm a Employee. My Name is " + getName());
+    public void greeting() {
+        System.out.println("Hello, I'm employee, my name is " + getName());
     }
+
+
 }

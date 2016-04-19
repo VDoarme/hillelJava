@@ -17,4 +17,5 @@ public abstract class Auto {
     public String toString(){
         return "Auto " + getMark() + ", year " + year;
     }
+
 }

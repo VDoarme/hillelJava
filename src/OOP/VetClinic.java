@@ -5,20 +5,19 @@ package OOP;
  */
 public class VetClinic {
     public static void main(String[] args) {
-
         Cat catTom = new Cat("Tom", "Blue", 2015);
 
-        //catTom.vacinate("SACC");
+        catTom.vaccinate("SACC");
 
-        //catTom.birthYear = 2014;
         System.out.println(catTom.getBirthYear());
 
         String name = catTom.getName();
-        name.replace('T', 'K');
-        System.out.println(name);
 
+        catTom.setName("Murzik");
 
+        System.out.println(catTom.getName());
 
+        String newName = name.replace('T', 'K');
     }
 
 

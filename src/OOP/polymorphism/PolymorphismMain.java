@@ -13,6 +13,7 @@ public class PolymorphismMain {
         print(o);
 
         print(new Person("Vasya"));
+
         print(new Employee("Vanya"));
 
         Object[] objects = new Object[3];
@@ -23,28 +24,25 @@ public class PolymorphismMain {
 
         print(objects);
 
-        //System.out.println("Person Vasya contains in array: " + contains(objects, new Person("Vasya")) );
-
-
+        System.out.println("Person Vasya contains in array: " + contains(objects, new Person("Vasya")));
     }
+
     public static void print(Object o){
         System.out.println(o);
     }
 
     public static void print(Object[] objects){
-        for (Object o : objects){
+        for (Object o : objects) {
             System.out.println(o);
         }
     }
-    /**
+
     public static boolean contains(Object[] objects, Object o){
-        for(Object object : objects){
-            object.equals(o){
+        for (Object object : objects) {
+            if (object.equals(o)) {
                 return true;
             }
         }
         return false;
     }
-     */
-
 }

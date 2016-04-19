@@ -8,10 +8,11 @@ import patterns.strategy.quack.Quack;
  */
 public class Decoy extends Duck {
 
-    public Decoy(){
-        quackBehavior = new Quack();
-        flyBehavior = new FlyNoWay();
+    public Decoy() {
+        quackBehaviour = new Quack();
+        flyBehaviour = new FlyNoWay();
     }
+
     @Override
     public void display() {
         System.out.println("decoy");
@@ -19,8 +20,6 @@ public class Decoy extends Duck {
 
     @Override
     public void swim() {
-        System.out.println("I can't swim");
+        System.out.println("I cant swim");
     }
-
-
 }

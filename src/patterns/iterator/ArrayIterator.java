@@ -6,11 +6,8 @@ import java.util.Iterator;
  * Created by User on 25.03.2016.
  */
 public class ArrayIterator implements Iterator {
-
     private Integer[] array;
-    private int currentIndex = 0; //можно без = 0б по ум. будет0
-
-
+    private int currentIndex = 0;
 
     public ArrayIterator(Integer[] array) {
         this.array = array;

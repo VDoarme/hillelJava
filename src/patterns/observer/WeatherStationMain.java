@@ -16,12 +16,12 @@ public class WeatherStationMain {
         station.addObserver(forecastDisplay);
 
         station.setTemperature(20);
-        station.setHumidity(20);
-        station.setPressure(20);
+        station.setHumidity(50);
+        station.setPressure(780);
         station.stateChanged();
 
         currentDisplay.display();
-        statisticDisplay.dispay();
+        statisticDisplay.display();
         forecastDisplay.display();
 
         station.removeObserver(forecastDisplay);
@@ -32,8 +32,7 @@ public class WeatherStationMain {
         station.stateChanged();
 
         currentDisplay.display();
-        statisticDisplay.dispay();
+        statisticDisplay.display();
         forecastDisplay.display();
-
     }
 }

@@ -6,22 +6,21 @@ import java.util.List;
 /**
  * Created by User on 29.03.2016.
  */
-public class StatisticDisplay implements Observer{
-
-    private List<Integer> temperatures = new ArrayList<Integer>();
+public class StatisticDisplay implements Observer {
+    private List<Integer> temperatures = new ArrayList<>();
     private List<Integer> humidities = new ArrayList<Integer>();
-    private List<Integer> presures = new ArrayList<Integer>();
+    private List<Integer> pressures = new ArrayList<Integer>();
 
     @Override
-    public void update(WeatherStation station){
-        temperatures.add(station.getPressure());
+    public void update(WeatherStation station) {
+        temperatures.add(station.getTemperature());
         humidities.add(station.getHumidity());
-        presures.add(station.getPressure());
+        pressures.add(station.getPressure());
     }
 
-    public void dispay(){
+    public void display() {
         System.out.println("temperatures: " + temperatures +
-        ", humidities: " + humidities +
-        ", pressures: " + presures);
+                ", humidities: " + humidities +
+                ", pressures: " + pressures);
     }
 }

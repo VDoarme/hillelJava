@@ -1,12 +1,12 @@
+package intro;
+
 /**
- * Created by User on 19.02.2016.
+ * Created by Valiage on 19.04.2016.
  */
-/*
-public class SelectiobSort {
+public class SelectionSort {
 
     public static void main(String[] args) {
-
-        int[] array = {3,2,5,1,8};
+        int[] array = {3, 2, 5, 1, 8};
 
         for (int i = 0; i < array.length; i++) {
             int min = array[i];
@@ -21,5 +21,7 @@ public class SelectiobSort {
             array[i] = array[min_index];
             array[min_index] = buf;
         }
+
+        Utils.printArray(array);
+    }
 }
-*/

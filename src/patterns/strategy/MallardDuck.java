@@ -1,17 +1,21 @@
 package patterns.strategy;
 
+import patterns.strategy.fly.Fly;
 import patterns.strategy.quack.Quack;
-import patterns.strategy.quack.QuackBehavior;
 
 /**
  * Created by User on 15.03.2016.
  */
-public class MallardDuck extends Duck{
+public class MallardDuck extends Duck {
 
-    QuackBehavior quackBehavior = new Quack();
+    public MallardDuck() {
+        quackBehaviour = new Quack();
+        flyBehaviour = new Fly();
+    }
 
     @Override
-    public void display(){
+    public void display() {
         System.out.println("mallard duck");
     }
+
 }
