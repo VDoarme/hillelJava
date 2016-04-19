@@ -2,11 +2,13 @@ package swing;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Created by User on 05.04.2016.
  */
-public class MainForm extends JFrame{
+public class MainForm extends JFrame {
     private JPanel panel;
     private JButton closeBtn;
     private JButton anotherCloseBtn;
@@ -16,16 +18,23 @@ public class MainForm extends JFrame{
         setVisible(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-        setTitle("My First Form");
+        setTitle("My first form");
         pack();
-        CloseOperation closeOperation = new CloseOperation();
-        closeBtn.addActionListener(closeOperation);
-        anotherCloseBtn.addActionListener(closeOperation);
 
+        ActionListener actionListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        };
+
+        actionListener = param -> System.exit(0);
+
+        closeBtn.addActionListener(actionListener);
+        anotherCloseBtn.addActionListener(actionListener);
     }
 
     public static void main(String[] args) {
         new MainForm();
     }
-
 }

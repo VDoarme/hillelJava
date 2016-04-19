@@ -12,28 +12,37 @@ public class MapMain {
 
     public static void main(String[] args) {
 
+
         Map<Person, Integer> personToDiscount = new HashMap<>();
 
-        personToDiscount.put(new Person("Vasya"), 10);
+        Person vasya = new Person("Vasya");
+
+        personToDiscount.put(vasya, 10);
         personToDiscount.put(new Person("Petya"), 10);
         personToDiscount.put(new Person("Vova"), 10);
 
-        personToDiscount.put(new Person("Petya"), 20);
+        personToDiscount.put(vasya, 20);
 
-        Integer vasyaDiscount = personToDiscount.get(new Person("Vasya"));
+        Integer vasyaDiscount = personToDiscount.get(vasya);
 
         System.out.println(vasyaDiscount);
 
-        for(Map.Entry<Person, Integer> personIntegerEntry : personToDiscount.entrySet()){
-            System.out.println(personIntegerEntry.getKey() + "'s discount is " + personIntegerEntry.getValue());
-        }
-        /*
-        for (Person person : personToDiscount.keySet(){
+        System.out.println(vasya.equals(vasya));
 
+        doStuff(personToDiscount);
+
+        for (Map.Entry<Person, Integer> personIntegerEntry : personToDiscount.entrySet()) {
+            System.out.println(personIntegerEntry.getKey() + ", my discount is " + personIntegerEntry.getValue());
+        }
+
+        for (Person person : personToDiscount.keySet()) {
             personToDiscount.get(person);
         }
-        */
+    }
 
+    private static void doStuff(Map<Person, Integer> someMap) {
+        someMap = new HashMap<>();
+        someMap.put(new Person("Ashot"), 95);
 
     }
 }
