@@ -6,7 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 /**
- * Created by Valiage on 19.04.2016.
+ * Created by User on 19.04.2016.
  */
 public class IoMain {
     public static void main(String[] args) {
