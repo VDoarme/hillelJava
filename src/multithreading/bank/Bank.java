@@ -1,4 +1,4 @@
-package multithreading;
+package multithreading.bank;
 
 /**
  * Created by User on 29.04.2016.
@@ -16,6 +16,8 @@ public class Bank {
             account1 += amount;
         }
     }
+
+
 
     public void check(){
         String message = "";
