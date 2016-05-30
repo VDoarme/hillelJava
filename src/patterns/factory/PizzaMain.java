@@ -1,5 +1,6 @@
 package patterns.factory;
 
+import enums.PizzaType;
 import patterns.factory.factory.ChPizzaFactory;
 import patterns.factory.factory.NyPizzaFactory;
 
@@ -9,9 +10,9 @@ import patterns.factory.factory.NyPizzaFactory;
 public class PizzaMain {
     public static void main(String[] args) {
         PizzaStore nyPizzaStore = new PizzaStore(new NyPizzaFactory());
-        nyPizzaStore.order("Cheese");
+        nyPizzaStore.order(PizzaType.CHEESE);
 
         PizzaStore chPizzaStore = new PizzaStore(new ChPizzaFactory());
-        chPizzaStore.order("Cheese");
+        chPizzaStore.order(PizzaType.MEAT);
     }
 }
