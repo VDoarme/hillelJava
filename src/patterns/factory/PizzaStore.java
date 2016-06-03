@@ -1,22 +1,22 @@
 package patterns.factory;
 
 import enums.PizzaType;
-import patterns.factory.pizza.Pizza;
 import patterns.factory.factory.PizzaFactory;
+import patterns.factory.pizza.Pizza;
 
 /**
- * Created by User on 30.05.2016.
+ * Created by MBCNEWMAIN on 30.05.2016.
  */
 public class PizzaStore {
     PizzaFactory pizzaFactory;
 
-    public PizzaStore(PizzaFactory pizzaFactory){
+    public PizzaStore(PizzaFactory pizzaFactory) {
         this.pizzaFactory = pizzaFactory;
     }
 
     public Pizza order(PizzaType type) {
 
-        Pizza pizza = pizzaFactory.createPizza(type) ;
+        Pizza pizza = pizzaFactory.createPizza(type);
 
         pizza.bake();
         pizza.cut();
@@ -24,34 +24,25 @@ public class PizzaStore {
         return pizza;
     }
 
-   /* private Pizza createPizza(String region, String type) {
+    /*private Pizza createPizza(String region, String type) {
         if (region.equals("CH")) {
             switch (type) {
-                case "Cheese":
-                    new ChikagoCheesePizza();
-                case "Meat":
-                    new ChikagoMeatPizza();
-                    break;
+                case "Cheese": return new ChicagoCheesePizza();
+                case "Meat": return new ChicagoMeatPizza();
                 default:
-                    throw new RuntimeException("unexpected pizza type. " +
-                            "Expected 'Meat', 'Cheese', but found: " + type);
+                    throw new RuntimeException("Unexpexted pizza type. " +
+                            "Expected 'Meat', 'Cheese', but found:" + type);
             }
         } else if (region.equals("NY")) {
             switch (type) {
-                case "Cheese":
-                    new NewYorkCheesePizza();
-                    break;
-                case "Meat":
-                    new NewYorkMeatPizza();
+                case "Cheese": return new NewYorkCheesePizza();
+                case "Meat": return new NewYorkMeatPizza();
                 default:
-                    throw new RuntimeException("unexpected pizza type. " +
-                            "Expected 'Meat', 'Cheese', but found: " + type);
+                    throw new RuntimeException("Unexpexted pizza type. " +
+                            "Expected 'Meat', 'Cheese', but found:" + type);
             }
         } else {
-            throw new RuntimeException("unexpected pizza type. " +
-                    "Expected 'Meat', 'Cheese', but found: " + type);
+            throw new RuntimeException("...");
         }
-    }
-}
-*/
+    }*/
 }
