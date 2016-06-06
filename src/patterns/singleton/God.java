@@ -8,4 +8,8 @@ public interface God {
     void heal();
 
     String getName();
+
+    default void resurect(){
+        System.out.println("Resurected");
+    }
 }
