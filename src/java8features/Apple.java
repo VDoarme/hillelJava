@@ -8,7 +8,11 @@ public class Apple {
     private String color;
     private int price;
 
-    public int get(weight, color, price)
+    public Apple(int weight, String color, int price) {
+        this.weight = weight;
+        this.color = color;
+        this.price = price;
+    }
 
     public int getWeight() {
         return weight;
